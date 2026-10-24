@@ -1,0 +1,119 @@
+{
+  "api": {
+    "titles": [
+      "Апартаменты в центральном районе",
+      "Уютный дом рядом с парком",
+      "Двухэтажный коттедж на берегу реки",
+      "Квартира, пять минут до метро",
+      "Отель 6 звезд",
+      "Хостел почти без тараканов"
+    ],
+    "descriptions": [
+      "Очень красивое помещение",
+      "Есть скидки для студентов",
+      "Завтраки включены в проживание",
+      "Окна выходят на восток",
+      "Детская площадка под окнами",
+      "Только людям славянской внешности",
+      "Можно с кошками и собаками"
+    ],
+    "cities": [
+      "Paris",
+      "Cologne",
+      "Brussels",
+      "Amsterdam",
+      "Hamburg",
+      "Dusseldorf"
+    ],
+    "previews": [
+      "preview.jpg",
+      "photo.png",
+      "offer.jpg",
+      "rentPrev.jpg",
+      "img.jpg",
+      "fotka.png",
+      "rent.jpg"
+    ],
+    "photos": [
+      "photo.png",
+      "offer.jpg",
+      "rentPrev.jpg",
+      "img.jpg",
+      "fotka.png",
+      "rent.jpg",
+      "photo1.png",
+      "offer1.jpg",
+      "rentPrev1.jpg",
+      "img1.jpg",
+      "fotka1.png",
+      "rent1.jpg",
+      "photo2.png",
+      "offer2.jpg",
+      "rentPrev2.jpg",
+      "img2.jpg",
+      "fotka2.png",
+      "rent2.jpg"
+    ],
+    "accommodationTypes": [
+      "apartment",
+      "house",
+      "room",
+      "hotel"
+    ],
+    "amenities": [
+      "Breakfast",
+      "Air conditioning",
+      "Laptop friendly workspace",
+      "Baby seat",
+      "Washer",
+      "Towels",
+      "Fridge"
+    ],
+    "authors": [
+      "Александра",
+      "Иван",
+      "Владимир",
+      "Елизавета",
+      "Ольга",
+      "Николай"
+    ],
+    "emails": [
+      "example@gmail.com",
+      "test@gmail.com",
+      "pochta@mail.ru",
+      "verymegasupercool2006@yandex.com",
+      "boris@gmail.com",
+      "apchhi@budzdorov.ru"
+    ],
+    "avatars": [
+      "photo.png",
+      "profile.jpg",
+      "bestphoto.jpg",
+      "0.jpg",
+      "profile_img.jpg",
+      "avatar.jpg",
+      "ava.png"
+    ],
+    "passwords": [
+      "qwerty",
+      "123456",
+      "13022003",
+      "password",
+      "admin",
+      "4dm1n",
+      "q1w2e3r4t5y6"
+    ],
+    "userTypes": [
+      "Pro",
+      "Standard"
+    ],
+    "coordinates": [
+      "48.85661;2.351499",
+      "50.938361;6.959974",
+      "50.846557;4.351697",
+      "52.370216;4.895168",
+      "53.550341;10.000654",
+      "51.225402;6.776314"
+    ]
+  }
+}
