@@ -9,7 +9,7 @@ export type CreateOfferDto = {
   photos: string[];
   isPremium: boolean;
   rating: number;
-  accommodationType?: AccommodationType
+  accommodationType?: AccommodationType;
   roomsCount: number;
   guestsCount: number;
   rentalCost: number;

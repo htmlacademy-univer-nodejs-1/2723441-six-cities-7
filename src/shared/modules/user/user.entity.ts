@@ -1,6 +1,6 @@
 import {defaultClasses, getModelForClass, prop, modelOptions, Ref} from '@typegoose/typegoose';
-import { Offer, User, UserType, UserTypes } from '../../types/index.js';
-import {createSHA256} from '../../helpers/index.js';
+import {Token, User, UserType, UserTypes} from '../../types/index.js';
+import {createSHA256, generateSessionToken} from '../../helpers/index.js';
 import {OfferEntity} from '../offer/index.js';
 
 export interface UserEntity extends defaultClasses.Base {
@@ -28,15 +28,15 @@ export class UserEntity extends defaultClasses.TimeStamps implements User {
   @prop({required: true, default: 'Standard', enum: UserTypes, type: () => String})
   public type?: UserType;
 
-  @prop({required: false, default: []})
-  public favouriteOffers: Offer[];
-
   @prop({
     ref: OfferEntity,
     required: false,
     default: []
   })
-  public favouriteOffersIds?: Ref<OfferEntity>[];
+  public favouriteOffers: Ref<OfferEntity>[];
+
+  @prop()
+  public token?: Token;
 
   constructor(userData: User) {
     super();
@@ -44,8 +44,18 @@ export class UserEntity extends defaultClasses.TimeStamps implements User {
     this.email = userData.email;
     this.avatarPath = userData.avatarPath;
     this.password = '';
+    this.token = undefined;
     this.type = userData.type;
     this.favouriteOffers = [];
+  }
+
+  public generateToken() {
+    this.token = generateSessionToken();
+    return this.token;
+  }
+
+  public removeToken() {
+    this.token = undefined;
   }
 
   public setPassword(password: string, salt: string) {
@@ -54,6 +64,11 @@ export class UserEntity extends defaultClasses.TimeStamps implements User {
 
   public getPassword() {
     return this.password;
+  }
+
+  public verifyPassword(password: string, salt: string): boolean {
+    const hashPassword = createSHA256(password, salt);
+    return hashPassword === this.password;
   }
 }
 
