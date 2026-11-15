@@ -1,4 +1,4 @@
-import {Offer, UserType} from '../../../types/index.js';
+import {UserType} from '../../../types/index.js';
 
 export type CreateUserDto = {
   name: string;
@@ -6,5 +6,4 @@ export type CreateUserDto = {
   avatarPath: string;
   password: string;
   type?: UserType;
-  favouriteOffers: Offer[];
 }
